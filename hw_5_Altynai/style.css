@@ -1,0 +1,25 @@
+html.light {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+}
+html.dark {
+    --color-bg: #000000;
+    --color-text: #ffffff;
+}
+html.blue {
+    --color-bg: #0515a0;
+    --color-text: #02143b;
+}
+html.pink {
+    --color-bg: #f137b9;
+    --color-text: #520629;
+}
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}

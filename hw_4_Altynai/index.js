@@ -42,7 +42,7 @@ var list = document.querySelector('.list')
 //           Задание 3
 var total = document.getElementById('total')
 var categories = products.reduce((tally, product) => {
-    tally[product] = (tally,[product] || 0 ) + 1;
+    tally[product.category] = (tally,[product.category] || 0 ) + 1;
     return tally
 }, {})
 
@@ -68,34 +68,34 @@ render()
 
 //     Задание 1
 
-// var eat = products.filter(function(categ) {
-//         if(categ.category == 'food'){
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     });
-// console.log(eat);
+var eat = products.filter(function(categ) {
+        if(categ.category === 'food' || categ.category === 'tool' ){
+            return true;
+        } else {
+            return false;
+        }
+    });
+console.log(eat);
 
 
 
 
 //              Задание 2
-// function render(){
-//     products.map(function(product){
-//         list.innerHTML += `
-//             <div class="product">
-//                 <div class="avatar"></div>
-//                  <div class="desc">
-//                     <h3>${product.productName}</h3>
-//                 </div>
-//             </div>`
-//     })
-// }
+function render(){
+    products.map(function(product){
+        list.innerHTML += `
+            <div class="product">
+                <div class="avatar"></div>
+                 <div class="desc">
+                    <h3>${product.productName}</h3>
+                </div>
+            </div>`
+    })
+}
 
 
 
-// render()
+render()
 
 
 
